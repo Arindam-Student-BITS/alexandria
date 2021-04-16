@@ -14,7 +14,7 @@ Project Alexandria is a small show-case of such capabilities of the modern techn
 
 ### Core Functionalities
 
-At basic level, Alexandria provides 
+At basic level, Alexandria provides
 - A set of APIs (based on python `FastAPI`) to google for books, based on author names, genre, ISBN ID etc.
 - A local database running behind the scene, which may be used to stored some meta data about the search results, with necessary notes/tagging
 - The APIs as well as the underlying database are spun up as docker containers so that it may be run anywhere by the user
@@ -23,5 +23,7 @@ At basic level, Alexandria provides
 
 ### Underlying Technologies/References
 
-1. For details on how to use _Google Books API_, [check out the documentation](https://developers.google.com/books/docs/v1/using).
-2. For details on how _FastAPI_ works, [check out the documentation](https://fastapi.tiangolo.com).
+1. For details on how to use _Google Books API_ [check out the documentation](https://developers.google.com/books/docs/v1/using).
+2. For details on how _FastAPI_ works [check out the documentation](https://fastapi.tiangolo.com).
+3. For details on _MongoDB_ [check out the documentation](https://www.mongodb.com/).
+4. For details on _Docker_ [check out the documentation](https://www.docker.com/).
