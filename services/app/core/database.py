@@ -19,12 +19,14 @@ def format_book(book) -> dict:
         "title": book["title"],
         "isbnID": book["isbnID"],
         "notes": book["notes"],
-        "tags": book["tags"]
+        "tags": book["tags"],
+        "publisher": book["publisher"] # Added key 'publisher' - Arindam
     }
 
 async def add_book(book_data: dict):
     book = await books_collection.insert_one(
-        {"_id": ObjectId(), "title": book_data.title, "isbnID": book_data.isbnID, "notes": book_data.notes, "tags": book_data.tags}
+        {"_id": ObjectId(), "title": book_data.title, "isbnID": book_data.isbnID, "notes": book_data.notes, "tags": book_data.tags,"publisher": book_data.publisher}
+    # Added key 'publisher' - Arindam
     )
     new_book = await books_collection.find_one({"_id": book.inserted_id})
     return format_book(new_book)
